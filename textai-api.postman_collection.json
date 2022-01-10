@@ -1,0 +1,1170 @@
+{
+	"info": {
+		"_postman_id": "72a65147-bbb8-468c-a9c8-7eadb1b3c49f",
+		"name": "textai-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Dhrumil\",\r\n    \"email_address\": \"dhrumilsheth@gmail.com\",\r\n    \"password\": \"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "secret",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxODM5NTAyNSwianRpIjoiZjUwMGZhN2UtOTY5Zi00ZGFmLWFiYTktMzFhYzI3MzdlNjUwIiwibmJmIjoxNjE4Mzk1MDI1LCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiRGhydW1pbCIsImV4cCI6MTYxODM5ODYyNX0.AodjsfsYsOB24lQxw2kyD1z_9fn9KUaWhXgO6epIrXI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/secret",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"secret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Dhrumil\",\r\n    \"password\": \"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh_token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYxNzcwMSwianRpIjoiY2ZkZGY4M2ItMTBmZS00MmJmLWFjNTctODE2YmJkY2ZiOWFiIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJEaHJ1bWlsIiwibmJmIjoxNjQxNjE3NzAxLCJleHAiOjE2NDQyMDk3MDF9._RidfrZVt44Ljetkxq9WWmqXVUdQn8f0KMr6zQkj95E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/token/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"token",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout_access",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxODM5ODcxNCwianRpIjoiNzJkNDFhOTItNWE2ZS00MGJiLThlNmUtMDA1MzEwMzViZThkIiwibmJmIjoxNjE4Mzk4NzE0LCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiRGhydW1pbCIsImV4cCI6MTYxODQwMjMxNH0.6GWUOvquaTlemLCFWFbE1SKa83H3aki-4_CfeLIxuJs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logout/access",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout",
+						"access"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout_refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxODM5ODkxMywianRpIjoiZWVhYWQ4Y2UtZGZmZi00ZWJmLTg3N2YtOWJhZjFkOWI1NjY3IiwibmJmIjoxNjE4Mzk4OTEzLCJ0eXBlIjoicmVmcmVzaCIsInN1YiI6IkRocnVtaWwiLCJleHAiOjE2MjA5OTA5MTN9.UsRq6ZYLWGDPT48E_rON0cj8K0iHbhcdVcOQSnB4Iac",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxODM5ODkxMywianRpIjoiZWVhYWQ4Y2UtZGZmZi00ZWJmLTg3N2YtOWJhZjFkOWI1NjY3IiwibmJmIjoxNjE4Mzk4OTEzLCJ0eXBlIjoicmVmcmVzaCIsInN1YiI6IkRocnVtaWwiLCJleHAiOjE2MjA5OTA5MTN9.UsRq6ZYLWGDPT48E_rON0cj8K0iHbhcdVcOQSnB4Iac\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/logout/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_new_access_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzOTk3MTQxMiwianRpIjoiOTFlMDk5NDUtNDI1Mi00M2UzLTk3ZmUtMDc4YzJkYzE5ZTY1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2Mzk5NzE0MTIsImV4cCI6MTYzOTk3NTAxMn0.gxN_yaYHVKEphcV906mmJTIlUHeKKLfoz6qW4rOPPxU\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/expired-token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"expired-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change_email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxODM5ODkxMywianRpIjoiZmJiNGJmNGItM2I2Ni00YjMyLTg3MDEtMmRjYTEwY2Q4MDVlIiwibmJmIjoxNjE4Mzk4OTEzLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiRGhydW1pbCIsImV4cCI6MTYxODQwMjUxM30.Wgzx8yMbk9tOI2lRUe9Hf75KC65X7EmsozYIpY8gtL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_address\":\"dhrumilsheth9009@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/change-email",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"change-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change_password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxODM5NDAxMSwianRpIjoiZTJhODViOWUtNjUxNC00NDc2LWE1NzQtY2E4N2ZmZjMyMjJhIiwibmJmIjoxNjE4Mzk0MDExLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiRGhydW1pbCIsImV4cCI6MTYxODM5NzYxMX0.rT5UAljzT2PAyZNYgDqvZSetFn5e2mjnuBZYZu9KFTE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"Dhrumil\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/change-password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "training_job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzNDMzNywianRpIjoiOTkwMWQ3YTYtYTE0Ny00YzFhLThkMDQtZTI2ZDc2NTQ3MDZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzQzMzcsImV4cCI6MTY0MTYzNzkzN30.HH0avWAYGRoonjRtXWfUDavbXbyE8YT55Hv0tIQ-gBs",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/dhrumilsheth/Desktop/Project/Sentiment/text-ai-celery-sample/training_file/training_data.csv"
+						},
+						{
+							"key": "model_name",
+							"value": "test2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/job",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_sdk_token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYyODcxNSwianRpIjoiODczNDgzYWQtZmE3Ni00YzRmLTljMWMtODliNWM5ZmE1OTIyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2Mjg3MTUsImV4cCI6MTY0MTYzMjMxNX0.rpNTOKBr_Vn6P_oIqRJmTlMuEIRf2Fa2C-sXeDkJJrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-sdk-token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-sdk-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTA4NTUwMiwianRpIjoiMzU2YTcwMWItODNmNi00NGJkLTlhY2YtZDAxZTdkMjcwYzk2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IktyaW5hIiwibmJmIjoxNjQxMDg1NTAyLCJleHAiOjE2NDEwODkxMDJ9.scOK5EE6abIieb6MmhY5tzz1K_sRVY8iBF8Bg-7ioqg",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model_name\":\"test3\",\n    \"model_type\":\"Custom\",\n    \"text\": [\n                {\n                    \"text\": \"i am updating my blog because i feel shitty\",\n                    \"text_id\": 1\n                },\n                {\n                    \"text\": \"i find myself in the odd position of feeling supportive of\",\n                    \"text_id\": 2\n                },\n                {\n                    \"text\": \"i feel like i m defective or something for not having baby fever\",\n                    \"text_id\": 3\n                },\n                {\n                    \"text\": \"im feeling insecure at the moment\",\n                    \"text_id\": 4\n                },\n                {\n                    \"text\": \"i know its easy to feel a little envious of me and i cant tell you that you shouldnt\",\n                    \"text_id\": 5\n                }\n            ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/flask_celery_howto.txt/it-works!",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MDMxMTE0OSwianRpIjoiODE4NWRlOWMtZjkyZi00YzEyLTk2NTgtZDg0YWRlNDc0NTc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDAzMTExNDksImV4cCI6MTY0MDMxNDc0OX0.ib_u1Tez_DaI86sDP_5FMo9fgA3fnk-023qAzRnORig",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/flask_celery_howto.txt/it-works!",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"flask_celery_howto.txt",
+						"it-works!"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "train-status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzNDMzNywianRpIjoiOTkwMWQ3YTYtYTE0Ny00YzFhLThkMDQtZTI2ZDc2NTQ3MDZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzQzMzcsImV4cCI6MTY0MTYzNzkzN30.HH0avWAYGRoonjRtXWfUDavbXbyE8YT55Hv0tIQ-gBs",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"job_id\":\"790d227f-cd63-4891-9577-634e39635237\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/train-status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"train-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task-status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzNDMzNywianRpIjoiOTkwMWQ3YTYtYTE0Ny00YzFhLThkMDQtZTI2ZDc2NTQ3MDZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzQzMzcsImV4cCI6MTY0MTYzNzkzN30.HH0avWAYGRoonjRtXWfUDavbXbyE8YT55Hv0tIQ-gBs",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"job_id\":\"8e8a6d89-9af5-497c-9ce1-25df6b94b663\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/task-status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"task-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-result",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"job_id\":\"8e8a6d89-9af5-497c-9ce1-25df6b94b663\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-result",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-model-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-model-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-model-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-result-model",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-result-model",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-result-model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-result-overall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-result-overall",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-result-overall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-range-result",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"2022-01-02\",\n    \"end_date\":\"2022-01-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-range-result",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-range-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-range-model-result",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"2022-01-02\",\n    \"end_date\":\"2022-01-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-range-model-result",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-range-model-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzNDMzNywianRpIjoiOTkwMWQ3YTYtYTE0Ny00YzFhLThkMDQtZTI2ZDc2NTQ3MDZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzQzMzcsImV4cCI6MTY0MTYzNzkzN30.HH0avWAYGRoonjRtXWfUDavbXbyE8YT55Hv0tIQ-gBs",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"2022-01-02\",\n    \"end_date\":\"2022-01-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-task",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-check",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/admin-check",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"admin-check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "model-list-admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/model-list-admin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"model-list-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-list-admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/user-list-admin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user-list-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-result-admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-result-admin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-result-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-result-admin-analytics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"2022-01-01\",\n    \"end_date\":\"2022-01-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-result-admin-analytics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-result-admin-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-model-admin-analytics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"\",\n    \"end_date\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-model-admin-analytics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-model-admin-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-request-admin-analytics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"\",\n    \"end_date\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-request-admin-analytics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-request-admin-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prediction-file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SDK_Authorization",
+						"value": "Bearer 235c0daf-96dd-4d1a-b5a7-a6a75054fcd8",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTYzODIwMiwianRpIjoiMWMyMjg1NjQtZTQ0Mi00ODc0LWFlZDUtNzI2ZmM1YTQ0M2ZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRocnVtaWwiLCJuYmYiOjE2NDE2MzgyMDIsImV4cCI6MTY0MTY0MTgwMn0.2k4TXmfBcb--cbk8QHM67hFClJe0xvM_E6qTR_CmAnA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "model_name",
+							"value": "test4",
+							"type": "default"
+						},
+						{
+							"key": "model_type",
+							"value": "Custom",
+							"type": "default"
+						},
+						{
+							"key": "text",
+							"type": "file",
+							"src": "/Users/dhrumilsheth/Desktop/Project/Sentiment/text-ai-celery-sample/training_file/api_testing.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/prediction-file",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"prediction-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-user-admin-analytics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTY5NzQ2NCwianRpIjoiODM4MzE4OWEtNTk1MC00YjBhLWExMzYtZjE5ODEwOTBlYzc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQxNjk3NDY0LCJleHAiOjE2NDE3MDEwNjR9.kiKxyUKYV51QqThabJGQNd4r5LUSDb3zkY6RnC9Tqt0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\":\"2022-01-01\",\n    \"end_date\":\"2022-01-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get-user-admin-analytics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get-user-admin-analytics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
